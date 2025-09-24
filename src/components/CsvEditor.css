@@ -1,0 +1,241 @@
+.loader-spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.csv-editor-navbar {
+  height: 6vh;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.csv-editor-navbar-leftside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.csv-editor-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0rem !important;
+}
+
+.csv-editor-navbar-rightside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.upload-csv {
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(106 184 255);
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+.upload-file-section {
+  background-color: #f5f5f5;
+  border-radius: 13px;
+  border: none;
+  margin: 22px;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px;
+}
+
+.upload-file-section-left-side {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(228 240 251);
+  border-radius: 22px;
+  padding: 22px;
+  align-items: baseline;
+  width: 70%;
+  gap: 16px;
+  justify-content: center;
+}
+.choose-file {
+  border-radius: 8px;
+  color: black;
+  border: 0.1px solid #d3b7b7;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.upload-file-section-right-side {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 27%;
+  color: gray;
+}
+.all-filter-section {
+  display: flex;
+  border-radius: 13px;
+  border: none;
+  margin: 7px;
+  justify-content: space-between;
+  padding: 17px;
+}
+
+.filter-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 22px;
+  padding: 22px;
+  border: 1px solid #e7e7e7;
+}
+
+.filter-input {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 6px 12px;
+  min-width: 180px;
+}
+
+.filter-input input,
+.filter-input select {
+  border: none;
+  outline: none;
+  margin-left: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.filter-icon {
+  color: #888;
+  font-size: 16px;
+}
+.filtersection-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 18px;
+}
+.reset-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: #00aaff;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.download-btn:hover {
+  background: #008ecc;
+}
+
+.reset-btn:hover {
+  background: #f8f8f8;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(.active):not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.page-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.page-btn.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .upload-file-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+  .upload-file-section-left-side {
+    width: 100% !important;
+  }
+
+  .filter-input {
+    width: 100%;
+  }
+  .filtersection-buttons {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+  .reset-btn {
+    font-size: 10px;
+  }
+  .download-btn {
+    font-size: 10px;
+  }
+  .all-filter-section {
+    gap: 20px;
+  }
+
+  .upload-file-section-right-side {
+    padding: 13px;
+    width: 100% !important;
+  }
+  .csv-editor-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
